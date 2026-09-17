@@ -1,0 +1,87 @@
+# ============================================================
+# FRAGMENTLY — .gitignore (GitHub standartlariga mos)
+# ============================================================
+
+# ------------------------------------------------------------
+# Environment / Secrets (ENG MUHIM!)
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+develop-eggs/
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Test / type-check / lint keshlari
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ------------------------------------------------------------
+# Ma'lumotlar bazasi fayllari (lokal DB'lar hech qachon commit qilinmaydi)
+# ------------------------------------------------------------
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+fragmently.db
+admin_backend.db
+test_admin_backend.db
+
+# ------------------------------------------------------------
+# Loglar va runtime artefaktlari
+# ------------------------------------------------------------
+*.log
+logs/
+_*.log
+_runner_pid.txt
+*.pid
+
+# ------------------------------------------------------------
+# Node / Frontend
+# ------------------------------------------------------------
+node_modules/
+dist/
+.vite/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ------------------------------------------------------------
+# IDE / Editor
+# ------------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+*.iml
+
+# ------------------------------------------------------------
+# OS
+# ------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+desktop.ini

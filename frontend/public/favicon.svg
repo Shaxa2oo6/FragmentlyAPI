@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0f1f"/>
+      <stop offset="50%" stop-color="#14102c"/>
+      <stop offset="100%" stop-color="#080914"/>
+    </linearGradient>
+
+    <!-- Glowing Cyan-Blue (Telegram & API vibe) -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#0072FF"/>
+    </linearGradient>
+
+    <!-- Telegram Stars Gold Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF275"/>
+      <stop offset="50%" stop-color="#FFB300"/>
+      <stop offset="100%" stop-color="#F77705"/>
+    </linearGradient>
+
+    <!-- Core Neon Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 1:1 Rounded Canvas -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Tech Grid / Circle Accent -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#2a2e58" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.4"/>
+  <circle cx="256" cy="256" r="225" fill="none" stroke="url(#cyanGrad)" stroke-width="1" opacity="0.2"/>
+
+  <!-- Background Ambient Glow -->
+  <circle cx="256" cy="230" r="120" fill="#7f00ff" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="256" cy="230" r="80" fill="#00e5ff" opacity="0.12" filter="url(#glow)"/>
+
+  <!-- CENTRAL ICON: Fragment Diamond / Crystal Shape (API Node) -->
+  <g transform="translate(0, -10)">
+    <!-- Left Crystal Wing -->
+    <path d="M256 120 L150 220 L256 320 L220 220 Z" fill="url(#cyanGrad)" opacity="0.9" />
+    
+    <!-- Right Crystal Wing -->
+    <path d="M256 120 L362 220 L256 320 L292 220 Z" fill="url(#cyanGrad)" opacity="0.7" />
+
+    <!-- Center Fragment Facet -->
+    <polygon points="256,120 220,220 256,320 292,220" fill="#ffffff" opacity="0.15"/>
+    
+    <!-- Premium 3D Cut Lines -->
+    <line x1="256" y1="120" x2="256" y2="320" stroke="#ffffff" stroke-width="2" opacity="0.6"/>
+    
+    <!-- API Brackets Integration < / > -->
+    <path d="M195 190 L165 220 L195 250" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>
+    <path d="M317 190 L347 220 L317 250" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>
+
+    <!-- Telegram Stars (Glowing 8-point & 4-point Stars) -->
+    <!-- Main Center Core Star -->
+    <path d="M256 195 Q256 220 231 220 Q256 220 256 245 Q256 220 281 220 Q256 220 256 195 Z" fill="url(#goldGrad)" filter="url(#glow)"/>
+    <circle cx="256" cy="220" r="4" fill="#FFF"/>
+
+    <!-- Accent Top Right Star -->
+    <path d="M355 140 Q355 152 343 152 Q355 152 355 164 Q355 152 367 152 Q355 152 355 140 Z" fill="url(#goldGrad)" filter="url(#softGlow)"/>
+    
+    <!-- Accent Left Star -->
+    <path d="M150 280 Q150 288 142 288 Q150 288 150 296 Q150 288 158 288 Q150 288 150 280 Z" fill="url(#goldGrad)" opacity="0.8"/>
+  </g>
+
+  <!-- Typography: FRAGMENTLY -->
+  <text x="256" y="390" text-anchor="middle" font-family="system-ui, -apple-system, 'SF Pro Display', Roboto, sans-serif" font-size="34" font-weight="900" letter-spacing="6" fill="#FFFFFF">
+    FRAGMENTLY
+  </text>
+
+  <!-- Sub-Badge: API -->
+  <g transform="translate(206, 412)">
+    <rect width="100" height="24" rx="12" fill="url(#cyanGrad)" opacity="0.2"/>
+    <rect width="100" height="24" rx="12" fill="none" stroke="url(#cyanGrad)" stroke-width="1.5"/>
+    <text x="50" y="16.5" text-anchor="middle" font-family="system-ui, -apple-system, Roboto, sans-serif" font-size="13" font-weight="800" letter-spacing="3" fill="#00F0FF">
+      API
+    </text>
+  </g>
+</svg>

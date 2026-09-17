@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /admin
+Disallow: /login
+Disallow: /settings
+Disallow: /profile
+Disallow: /mnemonic
+Disallow: /transactions
+Disallow: /subscriptions

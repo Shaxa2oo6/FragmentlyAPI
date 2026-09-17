@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Apply theme before first paint to avoid dark-mode flash (FOUC) -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>FRAGMENTLY-API — Telegram Stars va Premium sotib olish API platformasi</title>
+    <meta name="description" content="FRAGMENTLY-API — Telegram Stars va Premium sotib olish uchun zamonaviy Web3 API platformasi. Tezkor integratsiya, TON va USDT to'lovlar, 2-3 soniyada avtomatik yetkazish." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#7C6CF6" />
+    <meta name="keywords" content="Telegram Stars, Telegram Premium, API, Fragment, TON, USDT, Web3, stars buy, premium buy" />
+    <link rel="canonical" href="https://fragmently.uz/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FRAGMENTLY-API" />
+    <meta property="og:title" content="FRAGMENTLY-API — Telegram Stars va Premium" />
+    <meta property="og:description" content="Telegram Stars va Premium sotib olish API'si — interaktiv hujjatlar va jonli test." />
+    <meta property="og:url" content="https://fragmently.uz/" />
+    <meta property="og:locale" content="uz_UZ" />
+    <meta property="og:image" content="https://fragmently.uz/og-image.svg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="FRAGMENTLY-API — Telegram Stars va Premium" />
+    <meta name="twitter:description" content="Telegram Stars va Premium sotib olish uchun zamonaviy Web3 API platformasi." />
+    <meta name="twitter:image" content="https://fragmently.uz/og-image.svg" />
+
+    <!-- Structured data (schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FRAGMENTLY-API",
+        "url": "https://fragmently.uz/",
+        "description": "Telegram Stars va Premium sotib olish uchun zamonaviy Web3 API platformasi",
+        "inLanguage": "uz",
+        "publisher": {
+          "@type": "Organization",
+          "name": "FRAGMENTLY",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://fragmently.uz/favicon.svg"
+          }
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://fragmently.uz/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.jsx"></script>
+  </body>
+</html>
